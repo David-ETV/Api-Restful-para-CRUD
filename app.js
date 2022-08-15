@@ -52,9 +52,9 @@ app.post('/api/articulos', (req,res)=>{
             if(err){
                throw err
             }else{              
-             /*Esto es lo nuevo que agregamos para el CRUD con Javascript*/
-             Object.assign(data, {id: result.insertId }) //agregamos el ID al objeto data             
-             res.send(data) //enviamos los valores                         
+             
+             Object.assign(data, {id: result.insertId })             
+             res.send(data)                         
         }
     })
 })
